@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgra"
+    app:startDestination="@id/aragment">
+
+    <fragment
+        android:id="@+id/aragment"
+        android:name="com.example.deneme.aragment"
+        android:label="fragment_aragment"
+        tools:layout="@layout/fragment_aragment" >
+        <action
+            android:id="@+id/action_aragment_to_bFragment"
+            app:destination="@id/bFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bFragment"
+        android:name="com.example.deneme.bFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_bFragment_to_cFragment"
+            app:destination="@id/cFragment" />
+        <action
+            android:id="@+id/action_bFragment_to_aragment"
+            app:destination="@id/aragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cFragment"
+        android:name="com.example.deneme.cFragment"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_cFragment_to_bFragment"
+            app:destination="@id/bFragment" />
+        <action
+            android:id="@+id/action_cFragment_to_aragment"
+            app:destination="@id/aragment" />
+    </fragment>
+</navigation>
